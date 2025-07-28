@@ -1,7 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import * as simpleGit from 'simple-git';
+import simpleGit from 'simple-git';
 import axios from 'axios';
 
 // 模型类型定义
@@ -33,13 +33,14 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 
 		// 初始化Git并检查仓库
-		try {
-			const git = simpleGit(workspaceFolder);
-			// 检查是否是Git仓库
-			await git.status();
+	let diff: string | undefined;
+	try {
+		const git = simpleGit(workspaceFolder);
+		// 检查是否是Git仓库
+		await git.status();
 
-			// 获取暂存区变更
-			const diff = await git.diff(['--staged']);
+		// 获取暂存区变更
+		diff = await git.diff(['--staged']);
 			if (!diff) {
 				vscode.window.showInformationMessage('没有暂存的变更，请先暂存文件');
 				return;
