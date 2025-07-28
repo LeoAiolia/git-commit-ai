@@ -1,0 +1,72 @@
+{
+  "name": "git-commit-ai",
+  "displayName": "yxr_git_commit",
+  "description": "基于AI的Git提交信息生成器",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:git-commit-ai.generateCommitMessage"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "git-commit-ai.generateCommitMessage",
+        "title": "生成AI Commit消息"
+      }
+    ],
+    "configuration": {
+      "title": "Git Commit AI",
+      "properties": {
+        "gitCommitAI.apiKey": {
+          "type": "string",
+          "description": "AI模型API密钥"
+        },
+        "gitCommitAI.model": {
+          "type": "string",
+          "description": "AI模型名称",
+          "enum": [
+            "doubao",
+            "deepseek",
+            "tongyi"
+          ],
+          "default": "doubao"
+        },
+        "gitCommitAI.apiEndpoint": {
+          "type": "string",
+          "description": "AI模型API端点"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "dependencies": {
+    "simple-git": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.4",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.102.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "axios": "^1.11.0",
+    "eslint": "^9.25.1",
+    "simple-git": "^3.28.0",
+    "typescript": "^5.8.3"
+  }
+}
