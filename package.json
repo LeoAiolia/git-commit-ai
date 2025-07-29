@@ -1,27 +1,33 @@
 {
+  
   "name": "git-commit-ai",
-  "displayName": "yxr_git_commit",
+  "displayName": "Git Commit AI",
   "description": "基于AI的Git提交信息生成器",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "publisher": "LeoAiolia",
   "engines": {
     "vscode": "^1.100.0"
   },
+  "license": "MIT",
   "activationEvents": [
-    "onCommand:git-commit-ai.generateCommitMessage"
+    "onCommand:extension.git-commit-ai.generateCommitMessage"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/LeoAiolia/git-commit-ai.git"
   },
+  "homepage": "https://github.com/LeoAiolia/git-commit-ai/blob/master/README.md",
   "categories": [
     "Other"
   ],
+  "icon": "images/logo.png",
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "git-commit-ai.generateCommitMessage",
-        "title": "生成AI Commit消息"
+        "command": "extension.git-commit-ai.generateCommitMessage",
+        "title": "生成AI Commit消息",
+        "icon": "images/logo.png"
       }
     ],
     "configuration": {
