@@ -22,6 +22,8 @@ export function activate(context: vscode.ExtensionContext) {
 	console.log('Congratulations, your extension "git-commit-ai" is now active!');
 	console.log('Registering command: git-commit-ai.generateCommitMessage');
 
+	vscode.window.showInformationMessage('🔥 Git Commit AI 插件已激活');
+
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json

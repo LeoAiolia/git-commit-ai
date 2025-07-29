@@ -3,7 +3,7 @@
   "name": "git-commit-ai",
   "displayName": "Git Commit AI",
   "description": "基于AI的Git提交信息生成器",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "LeoAiolia",
   "engines": {
     "vscode": "^1.100.0"
