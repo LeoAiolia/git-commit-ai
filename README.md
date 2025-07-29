@@ -23,6 +23,23 @@
 * `gitCommitAI.model`: 选择AI模型（doubao/deepseek/tongyi，默认：doubao）
 * `gitCommitAI.apiEndpoint`: 自定义API端点（可选）
 
+## API密钥获取
+
+以下是各AI模型API密钥的官方获取途径：
+
+### 豆包（doubao）
+1. 访问火山引擎官网注册并完成实名认证：<mcurl name="火山引擎" url="https://www.volcengine.com/"></mcurl>
+2. 进入控制台的“火山方舟”服务
+3. 在API Key管理页面创建密钥<mcreference link="https://docs.tavo.cc/welcome/api-setting/get-key/doubao/" index="1">1</mcreference>
+
+### DeepSeek
+1. 注册DeepSeek账号并进入开发者中心：<mcurl name="DeepSeek开发者中心" url="https://www.deepseek.com/"></mcurl>
+2. 创建项目并生成API密钥<mcreference link="https://m.php.cn/faq/1409406.html" index="1">1</mcreference>
+
+### 通义千问（tongyi）
+1. 登录阿里云DashScope平台：<mcurl name="阿里云DashScope" url="https://dashscope.console.aliyun.com/overview"></mcurl>
+2. 在API-KEY管理页面创建新密钥<mcreference link="https://developer.aliyun.com/ask/683674" index="3">3</mcreference>
+
 ## 使用方法
 
 1. 在VS Code中打开命令面板（Ctrl+Shift+P 或 Cmd+Shift+P）
