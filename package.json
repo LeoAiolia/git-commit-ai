@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "activationEvents": [
-    "onCommand:extension.git-commit-ai.generateCommitMessage"
+    "onCommand:git-commit-ai.generateCommitMessage"
   ],
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.git-commit-ai.generateCommitMessage",
+        "command": "git-commit-ai.generateCommitMessage",
         "title": "生成AI Commit消息",
         "icon": "images/logo.png"
       }

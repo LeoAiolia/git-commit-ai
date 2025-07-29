@@ -20,12 +20,12 @@ export function activate(context: vscode.ExtensionContext) {
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "git-commit-ai" is now active!');
-	console.log('Registering command: extension.git-commit-ai.generateCommitMessage');
+	console.log('Registering command: git-commit-ai.generateCommitMessage');
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('extension.git-commit-ai.generateCommitMessage', async () => {
+	const disposable = vscode.commands.registerCommand('git-commit-ai.generateCommitMessage', async () => {
 		// 获取当前工作区路径
 		const workspaceFolder = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath;
 		if (!workspaceFolder) {
